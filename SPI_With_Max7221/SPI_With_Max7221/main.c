@@ -33,7 +33,7 @@ int main(void)
 {
 	unsigned int Counter = 1890;
     SPI_Init_Master(Clk_Rate_FOSC_divisable_by_16, Data_Order_MSB, Clk_Polarity_IDLE_LOW, Clk_Phase_LEADING);
-	MAX7221_Send(Mode_Register_Address,       0xFF);          // Enable Decode Mode for digits 7-0
+	MAX7221_Send(Mode_Register_Address,       0xff);          // Enable Decode Mode for digits 7-0
 	MAX7221_Send(Intensity_Regitser_Address,  0x09);          // Intensity 10/16
 	MAX7221_Send(Scan_Limit_Register_Address, 0x03);          // 4 7-Segments are used
 	MAX7221_Send(Shut_Down_Register_Address,  0x01);          // Turn on ship --> Normal Operation
